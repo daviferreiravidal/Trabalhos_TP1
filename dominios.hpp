@@ -14,4 +14,14 @@ class Avaliacao
         int getValor() const;
 };
 
+class Dinheiro
+{
+    private:
+        // Armazenar valor como "int" para evitar floating-point errors
+        int valor;
+        bool validar(int);
+    public:
+        bool setValor(float);
+        float getValor() const;
+};
 #endif
