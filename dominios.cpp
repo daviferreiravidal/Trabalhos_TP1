@@ -1,6 +1,7 @@
 // DEFINIÇÃO DAS CLASSES/DOMÍNIOS
 
 #include <iostream>
+#include <cctype> // isalnum()
 #include "dominios.hpp"
 
 using namespace std;
@@ -22,10 +23,28 @@ bool Avaliacao::setValor(int v)
     valor = v;
     return true;
 }
+// ---------------------------------------------------------------
 
-int Avaliacao::getValor() const
+// CÓDIGO --------------------------------------------------------
+bool Codigo::validar(string v)
 {
-    return valor;
+    int TAMANHO_CODIGO = 6;
+    if (v.length() != TAMANHO_CODIGO)
+        return false;
+    for (int i = 0; i < TAMANHO_CODIGO; i++)
+    {
+        if (! isalnum(v[i]))
+            return false;
+    }
+    return true;
+}
+
+bool Codigo::setValor(string v)
+{
+    if (!validar(v))
+        return false;
+    valor = v;
+    return true;
 }
 // ---------------------------------------------------------------
 
@@ -45,11 +64,39 @@ bool Dinheiro::setValor(double v)
     valor = novo_valor;
     return true;
 }
-
-double Dinheiro::getValor() const
-{
-    return static_cast<double>(valor) / 100;
-}
-
 // ---------------------------------------------------------------
 
+// DURAÇÃO -------------------------------------------------------
+bool Duracao::validar(int v)
+{
+    if (v >= 0 && v <= 360)
+        return true;
+    return false;
+}
+
+bool Duracao::setValor(int v)
+{
+    if (!validar(v))
+        return false;
+    valor = v;
+    return true;
+}
+// ---------------------------------------------------------------
+
+// NOME ----------------------------------------------------------
+bool Nome::validar(string v)
+{
+    // O nome precisa ter apenas letras???
+    if (v.length() > 0 && v.length() <= 30)
+        return true;
+    return false;
+}
+
+bool Nome::setValor(string v)
+{
+    if (!validar(v))
+        return false;
+    valor = v;
+    return true;
+}
+// ---------------------------------------------------------------

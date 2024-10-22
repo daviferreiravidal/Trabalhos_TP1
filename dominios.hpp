@@ -3,7 +3,9 @@
 #ifndef DOMINIOS_HPP_INCLUDED
 #define DOMINIOS_HPP_INCLUDED
 
-// Provisório
+#include <iostream>
+using namespace std; // 'string' está incluida no std
+
 class Avaliacao
 {
     private:
@@ -14,6 +16,26 @@ class Avaliacao
         int getValor() const;
 };
 
+inline int Avaliacao::getValor() const
+{
+    return valor;
+}
+
+class Codigo
+{
+    private:
+        string valor;
+        bool validar(string);
+    public:
+        bool setValor(string);
+        string getValor() const;
+};
+
+inline string Codigo::getValor() const
+{
+    return valor;
+}
+
 class Dinheiro
 {
     private:
@@ -22,6 +44,42 @@ class Dinheiro
         bool validar(int);
     public:
         bool setValor(double);
-        double getValor() const;
+        int getValor() const;
 };
+
+inline int Dinheiro::getValor() const
+{
+    return valor;
+}
+
+class Duracao
+{
+    private:
+        int valor;
+        bool validar(int);
+    public:
+        bool setValor(int);
+        int getValor() const;
+};
+
+inline int Duracao::getValor() const
+{
+    return valor;
+}
+
+class Nome
+{
+    private:
+        string valor;
+        bool validar(string);
+    public:
+        bool setValor(string);
+        string getValor() const;
+};
+
+inline string Nome::getValor() const
+{
+    return valor;
+}
+
 #endif
