@@ -1,7 +1,6 @@
 // DEFINIÇÃO DAS CLASSES/DOMÍNIOS
 
 #include <iostream>
-#include <cmath>
 #include "dominios.hpp"
 
 using namespace std;
@@ -38,19 +37,18 @@ bool Dinheiro::validar(int v)
     return false;
 }
 
-bool Dinheiro::setValor(float v)
+bool Dinheiro::setValor(double v)
 {
-    int novo_valor = static_cast<int>(floor(v * 100));
-    cout << v << " | " << floor(v * 100) << " | " << static_cast<int>(floor(v * 100)) <<endl;
+    int novo_valor = static_cast<int>(v * 100);
     if (!validar(novo_valor))
         return false;
     valor = novo_valor;
     return true;
 }
 
-float Dinheiro::getValor() const
+double Dinheiro::getValor() const
 {
-    return static_cast<float>(valor) / 100;
+    return static_cast<double>(valor) / 100;
 }
 
 // ---------------------------------------------------------------

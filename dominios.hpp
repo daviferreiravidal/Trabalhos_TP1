@@ -21,7 +21,7 @@ class Dinheiro
         int valor;
         bool validar(int);
     public:
-        bool setValor(float);
-        float getValor() const;
+        bool setValor(double);
+        double getValor() const;
 };
 #endif
