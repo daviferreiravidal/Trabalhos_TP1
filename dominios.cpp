@@ -28,7 +28,7 @@ bool Avaliacao::setValor(int v)
 // CÓDIGO --------------------------------------------------------
 bool Codigo::validar(string v)
 {
-    int TAMANHO_CODIGO = 6;
+    const int TAMANHO_CODIGO = 6;
     if (v.length() != TAMANHO_CODIGO)
         return false;
     for (int i = 0; i < TAMANHO_CODIGO; i++)
@@ -49,7 +49,7 @@ bool Codigo::setValor(string v)
 // ---------------------------------------------------------------
 
 // Data ------------------------------------------------------
-bool Data::validar(const string &v) 
+bool Data::validar(string v) 
 {
     int dia, mes, ano;
     if (v.length() != 8) 
@@ -68,10 +68,9 @@ bool Data::validar(const string &v)
     ano = stoi(v.substr(6, 2));
     if (dia < 1 || dia > 31 || mes < 1 || mes > 12 || ano < 0 || ano > 99) 
         return false;
-    // considera anos bissextos
+    // dias que não podem ocorrer
     if (mes == 2 && dia == 29 && ano % 4 != 0) 
-        return false;
-
+        return false; 
     if (mes == 2 && dia > 29) 
         return false;
     if (dia == 31 && (mes == 4 || mes == 6 || mes == 9 || mes == 11)) 
@@ -79,7 +78,7 @@ bool Data::validar(const string &v)
     return true;
 }
 
-bool Data::setValor(const string v) 
+bool Data::setValor(string v) 
 {
     if (!validar(v))
         return false;
