@@ -79,6 +79,23 @@ int main()
     else
         cout << "Valor 'nome' INVÁLIDO" << endl;
     // ------------------------------------------------------------
+
+    // HORÁRIO ----------------------------------------------------
+    //string teste_horario = "23:50"; // Válido
+    //string teste_horario = "04:00"; // Válido
+    //string teste_horario = "12:60"; // Inválido
+    //string teste_horario = "23-00"; // Inválido
+    //string teste_horario = "24:00"; // Inválido
+    //string teste_horario = "4:00"; // Inválido
+    //string teste_horario = "004:00"; // Inválido
+    string teste_horario = "04:000"; // Inválido
+
+    Horario horario;
+    if (horario.setValor(teste_horario))
+        cout << "Valor 'horário': " << horario.getValor() << " | Hora: " << horario.getHora() << " | Minutos: " << horario.getMinutos() << endl;
+    else
+        cout << "Valor 'horário' INVÁLIDO" << endl;
+    // ------------------------------------------------------------
 }
 
 

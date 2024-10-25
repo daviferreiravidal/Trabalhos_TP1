@@ -4,6 +4,7 @@
 #define DOMINIOS_HPP_INCLUDED
 
 #include <iostream>
+#include <pthread.h>
 using namespace std; // 'string' está incluida no std
 
 class Avaliacao
@@ -17,9 +18,7 @@ class Avaliacao
 };
 
 inline int Avaliacao::getValor() const
-{
-    return valor;
-}
+{ return valor; }
 
 class Codigo
 {
@@ -32,9 +31,7 @@ class Codigo
 };
 
 inline string Codigo::getValor() const
-{
-    return valor;
-}
+{ return valor; }
 
 class Data {
 private:
@@ -60,9 +57,7 @@ class Dinheiro
 };
 
 inline int Dinheiro::getValor() const
-{
-    return valor;
-}
+{ return valor; }
 
 class Duracao
 {
@@ -75,9 +70,7 @@ class Duracao
 };
 
 inline int Duracao::getValor() const
-{
-    return valor;
-}
+{ return valor; }
 
 class Nome
 {
@@ -90,8 +83,23 @@ class Nome
 };
 
 inline string Nome::getValor() const
+{ return valor; }
+
+class Horario
 {
-    return valor;
-}
+    private:
+        string valor;
+        bool validar(string);
+    public:
+        bool setValor(string);
+        // Precisam que o valor esteja definido
+        string getValor() const;
+        int getHora() const;
+        int getMinutos() const;
+};
+
+inline string Horario::getValor() const
+{ return valor; }
+
 
 #endif
