@@ -1,5 +1,6 @@
 #include <iostream> 
 #include <iomanip> // Include for setting precision
+#include <string>
 #include "dominios.hpp"
 
 using namespace std;
@@ -97,6 +98,24 @@ int main()
     else
         cout << "Valor 'horário' INVÁLIDO" << endl;
     // ------------------------------------------------------------
+
+        // SENHA ------------------------------------------------------
+    Senha senha;
+    string teste_senha = "12345"; // Inválido
+    // string teste_senha = "54321"; // Inválido
+    // string teste_senha = "11254"; // Inválido
+    // string teste_senha = "12234"; // Inválido
+    // string teste_senha = "25411"; // Inválido
+    // string teste_senha = "12554"; // Inválido
+    // string teste_senha = "12151515121"; // Inválido
+    // string teste_senha = ""; // Inválido
+    // string teste_senha = "112"; // Inválido
+    // string teste_senha = "12347"; // Válido
+
+    if (senha.setValor(teste_senha))
+        cout << "Valor 'senha': " << senha.getValor() << endl;
+    else
+        cout << "Valor 'senha' INVÁLIDO" << endl;
 }
 
 
