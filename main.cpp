@@ -31,14 +31,14 @@ int main()
     // ------------------------------------------------------------
 
     // DATA --------------------------------------------------
-  // string teste_data = "12-03-20"; // Válido
-  // string teste_data = "31:02:34"; //Invádio
-  string teste_data = "29:02:19"; // Inválido
-  Data data;
-  if (data.setValor(teste_data))
-    cout << "Valor 'data': " << data.getValor() << endl;
-  else
-    cout << "Valor 'data' INVÁLIDO" << endl;
+    string teste_data = "12-03-20"; // Válido
+    // string teste_data = "31:02:34"; //Invádio
+    //string teste_data = "29:02:19"; // Inválido
+    Data data;
+    if (data.setValor(teste_data))
+        cout << "Valor 'data': " << data.getValor() << endl;
+    else
+        cout << "Valor 'data' INVÁLIDO" << endl;
   // ------------------------------------------------------------
     
     // DINHEIRO ---------------------------------------------------
