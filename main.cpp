@@ -47,10 +47,11 @@ int main()
     //float test_dinheiro = 200000.01;// Inválido
     //int teste_dinheiro = 23000;// ? -> Válido
     //int teste_dinheiro = 5000.99;// ? -> Válido 
+    //double teste_dinheiro = 1080.578;// ? -> Inválido
     Dinheiro dinheiro;
     if (dinheiro.setValor(teste_dinheiro))
         // "setprecision": necessário para evitar arredondamentos indesejados
-        cout << "Valor 'dinheiro': " << fixed << setprecision(2) << static_cast<double>(dinheiro.getValor()) << endl;
+        cout << "Valor 'dinheiro': " << fixed << setprecision(2) << dinheiro.getValor() << endl;
     else
         cout << "Valor 'dinheiro' INVÁLIDO" << endl;
     // ------------------------------------------------------------
@@ -97,5 +98,6 @@ int main()
         cout << "Valor 'horário' INVÁLIDO" << endl;
     // ------------------------------------------------------------
 }
+
 
 
