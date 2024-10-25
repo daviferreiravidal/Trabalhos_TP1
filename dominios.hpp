@@ -36,6 +36,18 @@ inline string Codigo::getValor() const
     return valor;
 }
 
+class Data {
+private:
+  string valor;
+  bool validar(const string &);
+
+public:
+  bool setValor(const string);
+  string getValor() const;
+};
+
+inline string Data::getValor() const { return valor; }
+
 class Dinheiro
 {
     private:

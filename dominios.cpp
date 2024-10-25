@@ -48,6 +48,43 @@ bool Codigo::setValor(string v)
 }
 // ---------------------------------------------------------------
 
+// Data ------------------------------------------------------
+bool Data::validar(const string &v) {
+  int dia, mes, ano;
+  if (v.length() != 8)
+    return false;
+  if (v[2] != '-' || v[5] != '-')
+    return false;
+  for (int i = 0; i < 8; i++) {
+    if (i == 2 || i == 5)
+      continue;
+    if (!isdigit(v[i]))
+      return false;
+  }
+  dia = stoi(v.substr(0, 2));
+  mes = stoi(v.substr(3, 2));
+  ano = stoi(v.substr(6, 2));
+  if (dia < 1 || dia > 31 || mes < 1 || mes > 12 || ano < 0 || ano > 99)
+    return false;
+  // considera anos bissextos
+  if (mes == 2 && dia == 29 && ano % 4 != 0)
+    return false;
+
+  if (mes == 2 && dia > 29)
+    return false;
+  if (dia == 31 && (mes == 4 || mes == 6 || mes == 9 || mes == 11))
+    return false;
+  return true;
+}
+
+bool Data::setValor(const string v) {
+  if (!validar(v))
+    return false;
+  valor = v;
+  return true;
+}
+// ---------------------------------------------------------------
+
 // DINHEIRO ------------------------------------------------------
 bool Dinheiro::validar(int v)
 {
