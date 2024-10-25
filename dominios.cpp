@@ -51,7 +51,8 @@ bool Codigo::setValor(string v)
 // ---------------------------------------------------------------
 
 // Data ------------------------------------------------------
-bool Data::validar(const string &v) {
+bool Data::validar(const string &v) 
+{
     int dia, mes, ano;
     if (v.length() != 8) 
         return false;
@@ -80,14 +81,14 @@ bool Data::validar(const string &v) {
     return true;
 }
 
-bool Data::setValor(const string v) {
+bool Data::setValor(const string v) 
+{
     if (!validar(v))
         return false;
     valor = v;
     return true;
 }
 // ---------------------------------------------------------------
-
 // DINHEIRO ------------------------------------------------------
 bool Dinheiro::validar(int v)
 {
