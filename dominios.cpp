@@ -87,18 +87,19 @@ bool Data::setValor(string v)
 }
 // ---------------------------------------------------------------
 // DINHEIRO ------------------------------------------------------
-bool Dinheiro::validar(int v)
+bool Dinheiro::validar(double v)
 {
-    if (v >= 0 && v <= 20000000)
+    int novo_valor = static_cast<int>(v * 100);
+    if ((novo_valor >= 0 && novo_valor <= 20000000) && (v * 100 - novo_valor == 0))
         return true;
     return false;
 }
 
 bool Dinheiro::setValor(double v)
 {
-    int novo_valor = static_cast<int>(v * 100);
-    if (!validar(novo_valor))
+    if (!validar(v))
         return false;
+    int novo_valor = static_cast<int>(v * 100);
     valor = novo_valor;
     return true;
 }
@@ -163,6 +164,5 @@ int Horario::getMinutos() const
 {
     return stoi(valor.substr(3, 2));
 }
-
-
 // ---------------------------------------------------------------
+

@@ -1,5 +1,3 @@
-// DECLARAÇÃO DAS CLASSES/DOMÍNIOS
-
 #ifndef DOMINIOS_HPP_INCLUDED
 #define DOMINIOS_HPP_INCLUDED
 
@@ -50,16 +48,15 @@ inline string Data::getValor() const
 class Dinheiro
 {
     private:
-        // Armazenar valor como "int" para evitar floating-point errors
         int valor;
-        bool validar(int);
+        bool validar(double);
     public:
         bool setValor(double);
-        int getValor() const;
+        double getValor() const;
 };
 
-inline int Dinheiro::getValor() const
-{ return valor; }
+inline double Dinheiro::getValor() const
+{ return static_cast<double>(valor); }
 
 class Duracao
 {
@@ -105,3 +102,4 @@ inline string Horario::getValor() const
 
 
 #endif
+
