@@ -33,7 +33,8 @@ class Codigo
 inline string Codigo::getValor() const
 { return valor; }
 
-class Data {
+class Data 
+{
 private:
     string valor;
     bool validar(const string &);
