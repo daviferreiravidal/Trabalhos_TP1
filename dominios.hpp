@@ -35,13 +35,13 @@ inline string Codigo::getValor() const
 
 class Data 
 {
-private:
-    string valor;
-    bool validar(const string &);
+    private:
+        string valor;
+        bool validar(string);
 
-public:
-    bool setValor(const string);
-    string getValor() const;
+    public:
+        bool setValor(string);
+        string getValor() const;
 };
 
 inline string Data::getValor() const 
