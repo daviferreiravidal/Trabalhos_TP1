@@ -1,5 +1,3 @@
-// DEFINIÇÃO DAS CLASSES/DOMÍNIOS
-
 #include <iostream>
 #include <cctype> // isalnum()
 #include <regex>
