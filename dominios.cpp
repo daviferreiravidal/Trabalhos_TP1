@@ -166,3 +166,40 @@ int Horario::getMinutos() const
 }
 // ---------------------------------------------------------------
 
+// SENHA ---------------------------------------------------------
+bool Senha::validar(string v)
+{
+    bool crescente = true;
+    bool decrescente = true;
+    
+    if (v.length() != 5)
+        return false;
+
+    for (int i = 0; i < 5; i++)
+    {
+        // verificando se é digito
+        if (v[i] < '0' || v[i] > '9')
+            return false;
+        // verificando se há digitos repetidos
+        if (i != 4 && v[i] == v[i + 1])
+            return false;
+        // verificando se ainda está em ordem crescente
+        if (i != 4 && v[i+1] != v[i] + 1)
+            crescente = false;
+        // verificando se ainda está em ordem decrescente
+        if (i != 4 && v[i+1] != v[i] - 1)
+            decrescente = false;
+    }
+
+    if (crescente || decrescente)
+        return false;
+    return true;
+}
+
+bool Senha::setValor(string v)
+{
+    if (!validar(v))
+        return false;
+    valor = v;
+    return true;
+}

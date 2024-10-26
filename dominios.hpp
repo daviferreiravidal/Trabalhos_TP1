@@ -2,7 +2,7 @@
 #define DOMINIOS_HPP_INCLUDED
 
 #include <iostream>
-#include <pthread.h>
+// #include <pthread.h>
 using namespace std; // 'string' está incluida no std
 
 class Avaliacao
@@ -99,6 +99,21 @@ class Horario
 
 inline string Horario::getValor() const
 { return valor; }
+
+class Senha
+{
+    private:
+        string valor;
+        bool validar(string);
+    public:
+        bool setValor(string);
+        string getValor() const;
+};
+
+inline string Senha::getValor() const
+{
+    return valor;
+}
 
 
 #endif
