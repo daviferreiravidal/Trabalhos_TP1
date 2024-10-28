@@ -1,0 +1,106 @@
+#include <iostream> 
+#include <iomanip> // Include for setting precision
+#include "../include/avaliacao_v0.hpp"
+#include "../include/codigo_v0.hpp"
+#include "../include/data_v0.hpp"
+#include "../include/dinheiro_v0.hpp"
+#include "../include/duracao_v0.hpp"
+#include "../include/horario_v0.hpp"
+#include "../include/nome_v0.hpp"
+#include "../include/senha_v0.hpp"
+
+using namespace std;
+
+int main()
+{
+    // AVALIAÇÃO --------------------------------------------------
+    int teste_avaliacao = 3; // Válido
+    //int teste_avaliacao = -1; //Invádio
+    //int teste_avaliacao = 10; // Inválido
+    //char teste_avaliacao = '3'; // ? -> Inválido
+    Avaliacao avaliacao;
+    if (avaliacao.set_valor(teste_avaliacao))
+        cout << "Valor 'avaliação': " << avaliacao.get_valor() << endl;
+    else
+        cout << "Valor 'avaliação' INVÁLIDO" << endl;
+    // ------------------------------------------------------------
+
+    // CÓDIGO -----------------------------------------------------
+    string teste_codigo = "A1b2Z0"; // Válido
+    //string teste_codigo = "A1B2C3Z"; // Inválido
+    //string teste_codigo = ""; // Inválido
+    //string teste_codigo = "#abc12"; // Inválido
+    Codigo codigo;
+    if (codigo.set_valor(teste_codigo))
+        cout << "Valor 'código': " << codigo.get_valor() << endl;
+    else
+        cout << "Valor 'código' INVÁLIDO" << endl;
+    // ------------------------------------------------------------
+
+    // DATA --------------------------------------------------
+  // string teste_data = "12-03-20"; // Válido
+  // string teste_data = "31:02:34"; //Invádio
+  string teste_data = "29:02:19"; // Inválido
+  Data data;
+  if (data.set_valor(teste_data))
+    cout << "Valor 'data': " << data.get_valor() << endl;
+  else
+    cout << "Valor 'data' INVÁLIDO" << endl;
+  // ------------------------------------------------------------
+    
+    // DINHEIRO ---------------------------------------------------
+    //float teste_dinheiro = 2003.50; // Válido
+    double teste_dinheiro = 199999.99;// Válido
+    //float test_dinheiro = 200000.01;// Inválido
+    //int teste_dinheiro = 23000;// ? -> Válido
+    //int teste_dinheiro = 5000.99;// ? -> Válido 
+    Dinheiro dinheiro;
+    if (dinheiro.set_valor(teste_dinheiro))
+        // "setprecision": necessário para evitar arredondamentos indesejados
+        cout << "Valor 'dinheiro': " << fixed << setprecision(2) << static_cast<double>(dinheiro.get_valor()) << endl;
+    else
+        cout << "Valor 'dinheiro' INVÁLIDO" << endl;
+    // ------------------------------------------------------------
+
+    // DURAÇÃO ----------------------------------------------------
+    int teste_duracao = 0; // Válido
+    //int teste_duracao = 361; // Inválido
+    //double teste_duracao = 15.4; // ? -> Válido
+    //char teste_duracao = 'A'; // ? -> Válido (Depende do valor na tabela ascii)
+    Duracao duracao;
+    if (duracao.set_valor(teste_duracao))
+        cout << "Valor 'duração': " << duracao.get_valor() << endl;
+    else
+        cout << "Valor 'duração' INVÁLIDO" << endl;
+    // ------------------------------------------------------------
+
+    // NOME -------------------------------------------------------
+    string teste_nome = "AAAAAbbbbbCCCCCdddddEEEEEfffff"; // Válido
+    //string teste_nome = "AAAAAbbbbbCCCCCdddddEEEEEfffffG"; // Inválido
+    //string teste_nome = "AAAA1bbbb#CCCC?dddd*EEEE&ffff("; // Válido
+    //string teste_nome = "dfhedfbfh2834y12347$ç,."; // Válido
+    //string teste_nome = ""; // Inválido
+    Nome nome;
+    if (nome.set_valor(teste_nome))
+        cout << "Valor 'nome': " << nome.get_valor() << endl;
+    else
+        cout << "Valor 'nome' INVÁLIDO" << endl;
+    // ------------------------------------------------------------
+
+    // HORÁRIO ----------------------------------------------------
+    //string teste_horario = "23:50"; // Válido
+    //string teste_horario = "04:00"; // Válido
+    //string teste_horario = "12:60"; // Inválido
+    //string teste_horario = "23-00"; // Inválido
+    //string teste_horario = "24:00"; // Inválido
+    //string teste_horario = "4:00"; // Inválido
+    //string teste_horario = "004:00"; // Inválido
+    string teste_horario = "04:000"; // Inválido
+
+    Horario horario;
+    if (horario.set_valor(teste_horario))
+        cout << "Valor 'horário': " << horario.get_valor() << " | Hora: " << horario.get_hora() << " | Minutos: " << horario.get_minutos() << endl;
+    else
+        cout << "Valor 'horário' INVÁLIDO" << endl;
+    // ------------------------------------------------------------
+}

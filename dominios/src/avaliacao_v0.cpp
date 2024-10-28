@@ -1,0 +1,20 @@
+#include <cctype> // isalnum()
+#include <regex>
+#include "../include/avaliacao_v0.hpp"
+
+bool Avaliacao::validar(int v)
+{
+    // Precisa validar se o input é do tipo certo?
+    if (v >= 0 && v <= 5)
+        return true;
+    return false;
+}
+
+bool Avaliacao::set_valor(int v)
+{
+    if (!validar(v))
+        return false;
+
+    valor = v;
+    return true;
+}

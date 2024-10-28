@@ -1,0 +1,24 @@
+#include <cctype> // isalnum()
+#include <regex>
+#include "../include/horario_v0.hpp"
+
+
+bool Horario::validar(string v)
+{
+    std::regex padrao_horario(R"(^(?:[01]\d|2[0-3]):[0-5]\d$)");
+    return std::regex_match(v, padrao_horario);
+}
+
+bool Horario::set_valor(string v)
+{
+    if (!validar(v))
+        return false;
+    valor = v;
+    return true;
+}
+
+int Horario::get_hora() const
+{ return stoi(valor.substr(0, 2)); }
+
+int Horario::get_minutos() const
+{ return stoi(valor.substr(3, 2)); }
