@@ -1,0 +1,1 @@
+g++ -I../include src/main.cpp src/avaliacao_v0.cpp src/codigo_v0.cpp src/data_v0.cpp src/dinheiro_v0.cpp src/duracao_v0.cpp src/horario_v0.cpp src/nome_v0.cpp src/senha_v0.cpp -o output
