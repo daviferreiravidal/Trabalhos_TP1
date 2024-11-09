@@ -15,12 +15,12 @@ class Viagem
     public:
 
         void set_nome(const Nome&);
-        Nome set_nome() const;
+        Nome get_nome() const;
 
-        void set_avaliacao(const Avaliacao&)
+        void set_avaliacao(const Avaliacao&);
         Avaliacao get_avaliacao() const;
 
-}
+};
 
 inline void Viagem::set_nome(const Nome& nome)
 {

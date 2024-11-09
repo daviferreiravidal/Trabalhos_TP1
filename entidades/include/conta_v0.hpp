@@ -17,7 +17,7 @@ class Conta
  
         void set_senha(const Senha&);
         Senha get_senha() const;
-}
+};
 
 inline void Conta::set_codigo(const Codigo& codigo)
 {
