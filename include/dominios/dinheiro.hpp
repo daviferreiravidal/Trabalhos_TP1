@@ -1,5 +1,5 @@
-#ifndef DINHEIRO_HPP_INCLUDED
-#define DINHEIRO_HPP_INCLUDED
+#ifndef DINHEIRO_HPP
+#define DINHEIRO_HPP
 
 #include <string>
 using namespace std;

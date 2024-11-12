@@ -1,5 +1,6 @@
-#ifndef HORARIO_HPP_INCLUDED
-#define HORARIO_HPP_INCLUDED
+#ifndef HORARIO_HPP
+#define HORARIO_HPP
+
 
 #include <string>
 using namespace std;

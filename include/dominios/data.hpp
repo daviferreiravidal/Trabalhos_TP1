@@ -1,5 +1,5 @@
-#ifndef DATA_HPP_INCLUDED
-#define DATA_HPP_INCLUDED
+#ifndef DATA_HPP
+#define DATA_HPP
 
 #include <string>
 using namespace std;

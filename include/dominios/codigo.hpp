@@ -1,5 +1,5 @@
-#ifndef CODIGO_HPP_INCLUDED
-#define CODIGO_HPP_INCLUDED
+#ifndef CODIGO_HPP
+#define CODIGO_HPP
 
 #include <string>
 using namespace std;
@@ -16,5 +16,6 @@ class Codigo
 
 inline string Codigo::get_valor() const
 { return valor; }
+
 
 #endif

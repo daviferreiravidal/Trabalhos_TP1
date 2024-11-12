@@ -1,7 +1,6 @@
 #include <iostream> 
 #include <iomanip> // Include for setting precision
-#include <string>
-#include "include/dominios/DOMINIOS.hpp"
+#include "../include/dominio.hpp"
 
 using namespace std;
 

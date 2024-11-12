@@ -1,6 +1,9 @@
+#ifndef DURACAO_CPP
+#define DURACAO_CPP
+
+#include "../include/duracao.hpp"
 #include <cctype> // isalnum()
 #include <regex>
-#include "../../include/dominios/DOMINIOS.hpp"
 
 bool Duracao::validar(int v)
 {
@@ -16,3 +19,6 @@ bool Duracao::set_valor(int v)
     valor = v;
     return true;
 }
+
+
+#endif

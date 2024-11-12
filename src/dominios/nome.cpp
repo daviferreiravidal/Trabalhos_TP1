@@ -1,6 +1,10 @@
+#ifndef NOME_CPP
+#define NOME_CPP
+
+
+#include "../include/nome.hpp"
 #include <cctype> // isalnum()
 #include <regex>
-#include "../../include/dominios/DOMINIOS.hpp"
 
 bool Nome::validar(string v)
 {
@@ -17,3 +21,6 @@ bool Nome::set_valor(string v)
     valor = v;
     return true;
 }
+
+
+#endif

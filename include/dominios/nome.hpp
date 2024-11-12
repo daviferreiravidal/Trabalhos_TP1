@@ -1,5 +1,5 @@
-#ifndef NOME_HPP_INCLUDED
-#define NOME_HPP_INCLUDED
+#ifndef NOME_HPP
+#define NOME_HPP
 
 #include <string>
 using namespace std;

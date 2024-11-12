@@ -1,5 +1,9 @@
+#ifndef SENHA_CPP
+#define SENHA_CPP
+
+#include "../include/senha.hpp"
 #include <cctype> // isalnum()
-#include "../../include/dominios/DOMINIOS.hpp"
+#include <regex>
 
 bool Senha::validar(string v)
 {
@@ -47,3 +51,6 @@ bool Senha::set_valor(string v)
     valor = v;
     return true;
 }
+
+
+#endif

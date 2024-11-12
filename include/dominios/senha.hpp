@@ -1,5 +1,5 @@
-#ifndef SENHA_HPP_INCLUDED
-#define SENHA_HPP_INCLUDED
+#ifndef SENHA_HPP
+#define SENHA_HPP
 
 #include <string>
 using namespace std;

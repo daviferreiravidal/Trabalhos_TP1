@@ -1,5 +1,5 @@
-#ifndef AVALIACAO_HPP_INCLUDED
-#define AVALIACAO_HPP_INCLUDED
+#ifndef AVALIACAO_HPP
+#define AVALIACAO_HPP
 
 #include <string>
 using namespace std;
