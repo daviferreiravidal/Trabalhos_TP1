@@ -1,6 +1,9 @@
+#ifndef CODIGO_CPP
+#define CODIGO_CPP
+
+#include "../include/codigo.hpp"
 #include <cctype> // isalnum()
 #include <regex>
-#include "../include/codigo_v0.hpp"
 
 bool Codigo::validar(string v)
 {
@@ -22,3 +25,6 @@ bool Codigo::set_valor(string v)
     valor = v;
     return true;
 }
+
+
+#endif

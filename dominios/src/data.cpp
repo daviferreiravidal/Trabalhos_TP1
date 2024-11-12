@@ -1,6 +1,10 @@
+#ifndef DATA_CPP
+#define DATA_CPP
+
+
+#include "../include/data.hpp"
 #include <cctype> // isalnum()
 #include <regex>
-#include "../include/data_v0.hpp"
 
 
 bool Data::validar(string v) 
@@ -39,3 +43,6 @@ bool Data::set_valor(string v)
     valor = v;
     return true;
 }
+
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef AVALIACAO_HPP
+#define AVALIACAO_HPP
+
 #include <string>
 using namespace std;
 
@@ -13,3 +16,6 @@ class Avaliacao
 
 inline int Avaliacao::get_valor() const
 { return valor; }
+
+
+#endif

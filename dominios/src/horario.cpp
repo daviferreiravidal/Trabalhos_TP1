@@ -1,6 +1,9 @@
+#ifndef HORARIO_CPP
+#define HORARIO_CPP
+
+#include "../include/horario.hpp"
 #include <cctype> // isalnum()
 #include <regex>
-#include "../include/horario_v0.hpp"
 
 
 bool Horario::validar(string v)
@@ -22,3 +25,5 @@ int Horario::get_hora() const
 
 int Horario::get_minutos() const
 { return stoi(valor.substr(3, 2)); }
+
+#endif

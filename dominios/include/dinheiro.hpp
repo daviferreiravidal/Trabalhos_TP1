@@ -1,3 +1,6 @@
+#ifndef DINHEIRO_HPP
+#define DINHEIRO_HPP
+
 #include <string>
 using namespace std;
 
@@ -13,3 +16,6 @@ class Dinheiro
 
 inline double Dinheiro::get_valor() const
 { return static_cast<double>(valor); }
+
+
+#endif

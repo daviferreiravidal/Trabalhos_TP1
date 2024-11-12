@@ -1,3 +1,7 @@
+#ifndef HORARIO_HPP
+#define HORARIO_HPP
+
+
 #include <string>
 using namespace std;
 
@@ -16,3 +20,6 @@ class Horario
 
 inline string Horario::get_valor() const
 { return valor; }
+
+
+#endif
