@@ -1,10 +1,7 @@
-#ifndef DESTINO_V0_HPP_INCLUDED
-#define DESTINO_V0_HPP_INCLUDED
+#ifndef DESTINO_HPP
+#define DESTINO_HPP
 
-#include "../../dominios/include/codigo_v0.hpp"
-#include "../../dominios/include/nome_v0.hpp"
-#include "../../dominios/include/data_v0.hpp"
-#include "../../dominios/include/avaliacao_v0.hpp"
+#include "../dominios/src/dominio.cpp"
 #include <iostream>
 
 class Destino {

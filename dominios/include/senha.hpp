@@ -1,7 +1,10 @@
+#ifndef SENHA_HPP
+#define SENHA_HPP
+
 #include <string>
 using namespace std;
 
-class Codigo
+class Senha
 {
     private:
         string valor;
@@ -11,5 +14,8 @@ class Codigo
         string get_valor() const;
 };
 
-inline string Codigo::get_valor() const
+inline string Senha::get_valor() const
 { return valor; }
+
+
+#endif

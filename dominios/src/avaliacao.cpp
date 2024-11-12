@@ -1,6 +1,9 @@
+#ifndef AVALIACAO_CPP
+#define AVALICAO_CPP
+
+#include "../include/avaliacao.hpp"
 #include <cctype> // isalnum()
 #include <regex>
-#include "../include/avaliacao_v0.hpp"
 
 bool Avaliacao::validar(int v)
 {
@@ -18,3 +21,6 @@ bool Avaliacao::set_valor(int v)
     valor = v;
     return true;
 }
+
+
+#endif

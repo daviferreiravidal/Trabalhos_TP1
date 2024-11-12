@@ -1,13 +1,6 @@
 #include <iostream> 
 #include <iomanip> // Include for setting precision
-#include "../include/avaliacao_v0.hpp"
-#include "../include/codigo_v0.hpp"
-#include "../include/data_v0.hpp"
-#include "../include/dinheiro_v0.hpp"
-#include "../include/duracao_v0.hpp"
-#include "../include/horario_v0.hpp"
-#include "../include/nome_v0.hpp"
-#include "../include/senha_v0.hpp"
+#include "../include/dominio.hpp"
 
 using namespace std;
 

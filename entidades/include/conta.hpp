@@ -1,9 +1,8 @@
-#ifndef CONTA_V0_HPP_INCLUDED
-#define CONTA_V0_HPP_INCLUDED
+#ifndef CONTA_HPP
+#define CONTA_HPP
 
+#include "../dominios/src/dominio.cpp"
 #include <iostream>
-#include "dominios\include\senha_v0.hpp"
-#include "dominios\include\codigo_v0.hpp"
 
 class Conta 
 {

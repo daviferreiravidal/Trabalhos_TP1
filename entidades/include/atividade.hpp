@@ -1,10 +1,7 @@
-#include "dominios\src\codigo_v0.cpp"
-#include "dominios\src\nome_v0.cpp"
-#include "dominios\src\data_v0.cpp"
-#include "dominios\src\horario_v0.cpp"
-#include "dominios\src\duracao_v0.cpp"
-#include "dominios\src\dinheiro_v0.cpp"
-#include "dominios\src\avaliacao_v0.cpp"
+#ifndef ATIVIDADE_HPP
+#define ATIVIDADE_HPP
+
+#include "../dominios/src/dominio.cpp"
 
 using namespace std;
 
@@ -104,3 +101,6 @@ inline Avaliacao Atividade::get_avaliacao() const
 {
     return avaliacao;
 }
+
+
+#endif

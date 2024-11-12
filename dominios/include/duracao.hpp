@@ -1,3 +1,7 @@
+#ifndef DURACAO_HPP
+#define DURACAO_HPP
+
+
 #include <string>
 using namespace std;
 
@@ -13,3 +17,6 @@ class Duracao
 
 inline int Duracao::get_valor() const
 { return valor; }
+
+
+#endif
